@@ -7,8 +7,6 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void LoadLevel(string levelScene) {
-        string currentScene = SceneManager.GetActiveScene().name;
-
         SceneManager.LoadScene(levelScene, LoadSceneMode.Single);
     }
 }
