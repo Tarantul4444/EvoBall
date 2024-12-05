@@ -535,6 +535,8 @@ GameObject:
   - component: {fileID: 1885931529}
   - component: {fileID: 1885931528}
   - component: {fileID: 1885931527}
+  - component: {fileID: 1885931534}
+  - component: {fileID: 1885931533}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -549,7 +551,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885931526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2275232b8e25f405fbf3c477969ab0e8, type: 3}
   m_Name: 
@@ -669,6 +671,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885931533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885931526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978e66c74d49d4962bdc2aa5e854b7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0, g: 0.022338867, b: 1, a: 0}
+  - {r: 1, g: 0.050477777, b: 0, a: 0}
+  - {r: 0.04629445, g: 1, b: 0, a: 0}
+--- !u!114 &1885931534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885931526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2275232b8e25f405fbf3c477969ab0e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpForce: 5
 --- !u!1001 &1985799713300233188
 PrefabInstance:
   m_ObjectHideFlags: 0
