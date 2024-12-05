@@ -44,4 +44,3 @@ public class BallColorChanger : MonoBehaviour
         ballRenderer.material.color = colors[currentColorIndex];
     }
 }
-d
