@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
         Vector3 playerDirection = new Vector3(horizontalPosition, 0f, verticalPosition);
         playerRigidBody.velocity = new Vector3(playerDirection.x * _speed, playerRigidBody.velocity.y, playerDirection.z * _speed);
 
-        if (playerDirection.magnitude > 0.1f) playerTransform.Rotate(Vector3.up * _rotationSpeed * Time.deltaTime);
+        if (playerDirection.magnitude > 0.1f) playerTransform.Rotate(Vector3.left * _rotationSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !isLava) {
             playerRigidBody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
