@@ -850,6 +850,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70218bc6a6a573c4cbeebfddbc70d993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starTemplatesLevel1:
+  - {fileID: 1628382704}
+  - {fileID: 1715518212}
+  - {fileID: 913913498}
+  starsLevel1:
+  - {fileID: 1179365180}
+  - {fileID: 1880476849}
+  - {fileID: 1901747824}
+  starTemplatesLevel2:
+  - {fileID: 1976014523}
+  - {fileID: 518034375}
+  - {fileID: 16647006}
+  starsLevel2:
+  - {fileID: 1028597770}
+  - {fileID: 1875868491}
+  - {fileID: 1560833252}
+  starTemplatesLevel3:
+  - {fileID: 1404383927}
+  - {fileID: 74444296}
+  - {fileID: 272581348}
+  starsLevel3:
+  - {fileID: 1768964785}
+  - {fileID: 1335689918}
+  - {fileID: 1355914651}
 --- !u!1 &518034375
 GameObject:
   m_ObjectHideFlags: 0

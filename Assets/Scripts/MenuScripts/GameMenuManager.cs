@@ -1,10 +1,15 @@
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameMenuManager : MonoBehaviour {
     [SerializeField] private GameObject PauseButton;
     [SerializeField] private GameObject PlayButton;
     [SerializeField] private GameObject SettingsMenu;
+    [SerializeField] private GameObject WinPanel;
+    [SerializeField] private GameObject[] StarTemplates;
+    [SerializeField] private GameObject[] Stars;
 
     private const string menuScene = "Menu";
     private bool isPaused = false;
@@ -58,6 +63,17 @@ public class GameMenuManager : MonoBehaviour {
             isSettingsOpened = false;
             SettingsMenu.SetActive(isSettingsOpened);
             if (isPaused) PauseLevel();
+        }
+    }
+
+    public void OpenWinPanel(string starsData) {
+        WinPanel.SetActive(true);
+
+        for(int i = 0; i < starsData.Length; ++i) {
+            if (starsData[i] == '1') {
+                StarTemplates[i].SetActive(false);
+                Stars[i].SetActive(true);
+            }
         }
     }
 }
