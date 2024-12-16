@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Obstacle
   - GroundLava
+  - GroundRock
+  - GroundAir
+  - Enemy
   layers:
   - Default
   - TransparentFX
