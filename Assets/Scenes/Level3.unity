@@ -351,6 +351,10 @@ PrefabInstance:
       value: EnemySpider (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7940710223550435925, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940710223550435925, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1242219702}
@@ -375,6 +379,10 @@ PrefabInstance:
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_LocalScale.x
@@ -535,6 +543,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1d922f3a882973478b1b4e901848213, type: 3}
+--- !u!114 &274738041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979546973220236496, guid: d1d922f3a882973478b1b4e901848213, type: 3}
+  m_PrefabInstance: {fileID: 274738040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24f1f2ba5bc14a4cb6ac6771687651a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &274738042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4979599032137812149, guid: d1d922f3a882973478b1b4e901848213, type: 3}
+  m_PrefabInstance: {fileID: 274738040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5b490c51d4b13428f0c19e5b860ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &459109884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -546,6 +576,10 @@ PrefabInstance:
     - target: {fileID: 1493958779012120596, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
       propertyPath: m_Name
       value: Branch_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493958779012120596, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1493958779012619316, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
       propertyPath: m_LocalScale.x
@@ -864,9 +898,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 136312226}
     m_Modifications:
+    - target: {fileID: 1266246880883021217, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4148475089849382465, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4148475089849382465, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -912,6 +950,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1242219702}
+    - target: {fileID: 7940710223550435925, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2069591325}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1036,9 +1078,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: gameMenuManager
+      value: 
+      objectReference: {fileID: 274738042}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: heartsController
+      value: 
+      objectReference: {fileID: 274738041}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2874893448092641448, guid: 59069c09b1bc0554ab28d2e3279b3895, type: 3}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: materials.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: projectileSpawnPoint
+      value: 
+      objectReference: {fileID: 1360049784}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5674184a87d87e54ca8047426601a57b, type: 2}
+    - target: {fileID: 7688554893012356654, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      propertyPath: materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6029429745503786044, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1360049784}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e656940e32dd24f9251a150df7f9d8, type: 3}
 --- !u!4 &1242219702 stripped
@@ -1113,6 +1186,10 @@ PrefabInstance:
     - target: {fileID: 4385080170328260021, guid: ff62b58c5a9ea164fa8ddf8038e10cd1, type: 3}
       propertyPath: m_Name
       value: Mushroom_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385080170328260021, guid: ff62b58c5a9ea164fa8ddf8038e10cd1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1288,6 +1365,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1360049783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1360049784}
+  m_Layer: 0
+  m_Name: ProjectileSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1360049784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360049783}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6799998, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1242219702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1383755100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1351,6 +1459,10 @@ PrefabInstance:
     - target: {fileID: 1576488453971893466, guid: a778b631c6253a04899cb31bad047c81, type: 3}
       propertyPath: m_Name
       value: Rock_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576488453971893466, guid: a778b631c6253a04899cb31bad047c81, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1430,6 +1542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4385080170328260021, guid: ff62b58c5a9ea164fa8ddf8038e10cd1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1451,6 +1567,10 @@ PrefabInstance:
     - target: {fileID: 4263922822445002727, guid: 3cdafb3c2f54d434894928d72d282874, type: 3}
       propertyPath: m_Name
       value: Bush_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263922822445002727, guid: 3cdafb3c2f54d434894928d72d282874, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4263922822445036487, guid: 3cdafb3c2f54d434894928d72d282874, type: 3}
       propertyPath: m_LocalScale.x
@@ -1601,7 +1721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4148475089849382465, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4148475089849382465, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1609,7 +1729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148475089849382465, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4148475089849382465, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1788,6 +1908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flowers_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5186735023776687486, guid: ac8efb728f1fb9b4092c4df591c827ca, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5186735023777053022, guid: ac8efb728f1fb9b4092c4df591c827ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -1914,6 +2038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01
       objectReference: {fileID: 0}
+    - target: {fileID: 108507113624723981, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1992,6 +2120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4385080170328260021, guid: ff62b58c5a9ea164fa8ddf8038e10cd1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2016,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293130465974542706, guid: 6d1877bb9e2afbc42943d096e0328449, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3293130465974542706, guid: 6d1877bb9e2afbc42943d096e0328449, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2054,6 +2186,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 3300821161635466469, guid: 6d1877bb9e2afbc42943d096e0328449, type: 3}
+      propertyPath: m_TagString
+      value: GroundAir
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820722937939095271, guid: 6d1877bb9e2afbc42943d096e0328449, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2063,6 +2203,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293130465974542706, guid: 6d1877bb9e2afbc42943d096e0328449, type: 3}
   m_PrefabInstance: {fileID: 2041790126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2069591325 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7731891113462151974, guid: fd1d408c5510aa54bb72984d5fff5a1f, type: 3}
+  m_PrefabInstance: {fileID: 178308841}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

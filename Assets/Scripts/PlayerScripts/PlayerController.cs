@@ -98,19 +98,29 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void getDamage() {
-        if (lives > 0) --lives;
-        else {
-            gameMenuManager.PauseLevel();
-            gameMenuManager.OpenWinPanel("000");
-        }
-        heartsController.RemoveHeart();
+    if (lives > 0) {
+        lives--; // Уменьшаем жизни на 1
+        heartsController.RemoveHeart(); // Обновляем интерфейс
+        Debug.Log($"Игрок получил урон. Осталось жизней: {lives}");
     }
+
+    if (lives <= 0) {
+        gameMenuManager.PauseLevel();
+        gameMenuManager.OpenWinPanel("000"); // Проигрышный экран
+    }
+}
 
     private void changeMaterial(int materialIndex) {
         isLava = materialIndex == 1 ? true : false;
         isRock = materialIndex == 2 ? true : false;
         playerRenderer.material = materials[materialIndex];
     }
+
+    public void Die()
+{
+    Debug.Log("Игрок мгновенно погиб!");
+    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+}
 
         private void Shoot() {
         if (Time.time - lastShootTime < shootCooldown) return;

@@ -1,18 +1,23 @@
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
+    [SerializeField] private float speed = 20f;
     [SerializeField] private float lifeTime = 3f;
 
+    private Rigidbody rb;
+
     void Start() {
-        Destroy(gameObject, lifeTime); // Уничтожить снаряд через заданное время
+        rb = GetComponent<Rigidbody>();
+        rb.velocity = transform.forward * speed; // Двигаем снаряд вперёд
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous; // Точная коллизия
+        Destroy(gameObject, lifeTime); // Уничтожаем снаряд по времени
     }
 
     private void OnCollisionEnter(Collision collision) {
-        // Проверяем, если попали во врага
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("isBoss")) {
+        if (collision.gameObject.CompareTag("Enemy")) {
             EnemySpiderController enemy = collision.gameObject.GetComponent<EnemySpiderController>();
             if (enemy != null) {
-                enemy.TakeDamage(); // Наносим урон врагу
+                enemy.TakeDamage(); // Наносим урон
             }
             Destroy(gameObject); // Уничтожаем снаряд
         }

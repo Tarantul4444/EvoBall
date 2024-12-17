@@ -10,6 +10,8 @@ TagManager:
   - GroundRock
   - GroundAir
   - Enemy
+  - AirPlane
+  - Trap
   layers:
   - Default
   - TransparentFX
